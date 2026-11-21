@@ -1,6 +1,6 @@
 // Offline support: the app shell and the law text are cached on first visit.
 // Bump VERSION whenever index.html or data.json change so phones pick up the new files.
-const VERSION = 'sdp-v2';
+const VERSION = 'sdp-v3';
 const CORE = ['./', 'index.html', 'data.json', 'manifest.webmanifest', 'icons/apple-touch-icon.png', 'icons/icon-192.png', 'icons/icon-512.png', 'law-sections.pdf'];
 
 self.addEventListener('install', e => {

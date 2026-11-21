@@ -316,7 +316,8 @@ function planInfo(){
 }
 
 /* ---------- rendering helpers ---------- */
-const titleHTML=t=>{const m=String(t).match(/^(.*?)(\s*\[[^\]]*\])$/);return m?esc(m[1])+'<span class="ref">'+esc(m[2])+'</span>':esc(t)};
+// The trailing [..] in a margin title points to the section number in the pre-consolidation law; it is not exam material, so it is not shown.
+const titleHTML=t=>{const m=String(t).match(/^(.*?)(\s*\[[^\]]*\])$/);return m?esc(m[1]):esc(t)};
 const lbHTML=p=>p.l.map(l=>'<span class="lb">('+esc(l)+')</span>').join('');
 function textWithMarks(t,marks){// marks: [{s,e,cls,rep}]
   marks=marks.slice().sort((a,b)=>a.s-b.s);let out='',pos=0;
