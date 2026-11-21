@@ -1,0 +1,17 @@
+{
+  "name": "שינון סדר דין פלילי",
+  "short_name": "סד״פ",
+  "description": "שינון סעיפי החוק לקורס סדר דין פלילי: נוסח מדויק, כרטיסיות, השלמת חסר ומבחני דמה.",
+  "lang": "he",
+  "dir": "rtl",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#F3F4F7",
+  "theme_color": "#8A1C35",
+  "icons": [
+    {"src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
