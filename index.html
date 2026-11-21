@@ -71,6 +71,8 @@ h3{font-size:.8rem;font-weight:800;letter-spacing:.04em;color:var(--muted);margi
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:46px;padding:10px 18px;border-radius:12px;border:1.5px solid var(--line);background:var(--surface);font-weight:700}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
 .btn.block{width:100%}
+a.btn{text-decoration:none;color:inherit}
+.btn.pdf svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
 .btn.ghost{background:transparent}
 .btn:disabled{opacity:.45;cursor:default}
 .linkish{background:none;border:0;padding:0;color:var(--accent);font-weight:700;text-decoration:underline;text-underline-offset:3px}
@@ -544,6 +546,7 @@ function renderLearn(){
   view.innerHTML=`
   <div class="seg" role="group" aria-label="בחירת חוק">${D.laws.map(l=>`<button data-law="${l.id}" aria-pressed="${l===law}">${esc(l.short)}</button>`).join('')}</div>
   <div style="margin-top:12px"><input class="search" id="q" type="search" placeholder="חיפוש לפי מספר סעיף, כותרת או מילה בנוסח" value="${esc(learnQ)}"></div>
+  <a class="btn block pdf" href="law-sections.pdf" target="_blank" rel="noopener" style="margin-top:10px"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M9 14h6M9 17h4"/></svg>כל הסעיפים כקובץ PDF</a>
   <p class="lawname">${esc(law.name)}</p>
   <p class="scope">בחומר: ${esc(law.note)}</p>
   <div id="slist"></div>`;
